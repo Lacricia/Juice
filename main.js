@@ -41,14 +41,10 @@ const sliderDots = document.querySelector('.slider-dots'),
       slidesDots = sliderDots.querySelectorAll('.slider-dots-item'),
       wrapperDots = sliderDots.querySelector('.slider-dots__nav');
 
-console.log(wrapperDots);
-
 const dots = []; 
 
 for (let i = 0; i < slidesDots.length; i++) {
-    console.log(i);
     const dot = document.createElement('button');
-    console.log(dot);
 
     dot.dataset.slideTo = i;
 
@@ -64,17 +60,13 @@ for (let i = 0; i < slidesDots.length; i++) {
 }
 
 function showSlideDots(e) {
-    console.log(e.target);
 
     const slideTo = e.target.dataset.slideTo;
 
-    console.log(slideTo);
-    console.log(slidesDots[slideTo]);
 
     slidesDots.forEach(slide => slide.style.display = 'none');
     slidesDots[slideTo].style.display = 'block';
 
-    console.log(dots);
     dots.forEach(dot => dot.classList.remove('slider-dots__nav-item--active'));
     e.target.classList.add('slider-dots__nav-item--active');
 }
