@@ -132,7 +132,7 @@ body {
     filter: brightness(80%);
     display: flex;
 }
-.slider-arrows-nav {
+.slider-arrows__nav {
     position: absolute;
     left: 0;
     top: 50%;
